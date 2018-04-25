@@ -15,6 +15,8 @@ document.getElementById('minus').value = "-";
 document.getElementById('plus').value = "+";
 document.getElementById('equals').value = "&equals";
 document.getElementById('dot').value = ".";
+var display = document.getElementById("display");
+display.innerHTML = 0;
 var a = 0;
 var b = 0;
 var operation = null;
@@ -27,18 +29,22 @@ function reply_numbers(clicked_id) {
         if (a == 0) {
             //alert(clicked_id);
             a = document.getElementById(clicked_id).value;
+            display.innerHTML = a;
             console.log("a:", a);
         } else {
             a = a + document.getElementById(clicked_id).value;
+            display.innerHTML = a;
             console.log("a:", a);
         }
     } else if (operation != null) {
         if (b == 0) {
             //alert(clicked_id);
             b = document.getElementById(clicked_id).value;
+            display.innerHTML = b;
             console.log("b:", b);
         } else {
             b = b + document.getElementById(clicked_id).value;
+            display.innerHTML = b;
             console.log("b:", b);
         }
     }
@@ -48,6 +54,7 @@ function reply_numbers(clicked_id) {
 function reply_operation(clicked_id) {
     if (operation == null) {
         operation = document.getElementById(clicked_id).value;
+        //display.innerHTML = "";
         console.log("operation:", operation);
     }
 }
@@ -72,6 +79,8 @@ function reply_calc(clicked_id) {
     //calcul = a + operation + b;
     //= Number(calcul);
     //console.log("calcul:", calcul);
+    //display.innerHTML = "";
+    display.innerHTML = result;
     console.log("result:", result);
     a = 0;
     b = 0;
