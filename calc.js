@@ -82,7 +82,7 @@ function reply_calc(clicked_id) {
     //display.innerHTML = "";
     display.innerHTML = result;
     console.log("result:", result);
-    a = 0;
+    a = result;
     b = 0;
     operation = null;
 }
