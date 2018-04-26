@@ -56,6 +56,10 @@ function reply_operation(clicked_id) {
         operation = document.getElementById(clicked_id).value;
         //display.innerHTML = "";
         console.log("operation:", operation);
+    } 
+    else if(operation != null){
+        reply_calc();
+        operation = document.getElementById(clicked_id).value;
     }
 }
 
